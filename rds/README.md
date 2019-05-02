@@ -111,7 +111,7 @@ $ vi wp-config.php
 
 
 
-### 4. 기존 Databse를 RDS에 연결하기
+### 4. 기존 Database를 RDS에 연결하기
 
 ```shell
 현재 경로: /home/bitnami/apps/phpmyadmin
@@ -170,5 +170,5 @@ phpmyadmin에 접속한 후, 새로운 데이터베이스 wordpress (원하는 �
 
 ![](./img/15.png)
 
-고생하셨습니다. 다음 세션인 [S3 세션](../s3/readme.md)으로 이동해주세요. :slightly_smiling_face:
+고생하셨습니다. 다음 세션인 [S3 세션](../s3/README.md)으로 이동해주세요. :slightly_smiling_face:
 
