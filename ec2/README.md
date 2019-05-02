@@ -1,9 +1,9 @@
-# EC2를 사용하여 워드프레스 띄워보기
+## EC2를 사용하여 워드프레스 띄워보기
 
 이 가이드는 Amazon EC2 가상 머신(인스턴스)에 설치된 WordPress를 이용하여 웹사이트를 가동하고 운영하는 방법을 다룹니다.
 모든 작업은 프리티어에 해당합니다.
 
-1. AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2를 찾아 대시보드를 엽니다.
+1. **AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2를 찾아 대시보드를 엽니다.**
 
 ![콘솔 로그인](./img/console_login.png)
 ![컴퓨팅 - 서비스](./img/computing_service.png)
