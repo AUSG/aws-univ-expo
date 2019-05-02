@@ -1,17 +1,21 @@
+# EC2를 사용하여 워드프레스 띄워보기
+
 이 가이드는 Amazon EC2 가상 머신(인스턴스)에 설치된 WordPress를 이용하여 웹사이트를 가동하고 운영하는 방법을 다룹니다.
 모든 작업은 프리티어에 해당합니다.
 
-AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2를 찾아 대시보드를 엽니다.
+1. AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2를 찾아 대시보드를 엽니다.
 
 ![콘솔 로그인](./img/console_login.png)
 ![컴퓨팅 - 서비스](./img/computing_service.png)
 
-1. **Amazon EC2 인스턴스 시작**
+2. **Amazon EC2 인스턴스 시작**
+
   - EC2 대시보드 왼쪽에서 인스턴스를 클릭하고 인스턴스 시작을 선택하여 가상 머신을 생성합니다.
 
   ![인스턴스 생성](./img/launch_instance.png)
 
-2. **인스턴스 구성**
+3. **인스턴스 구성**
+
   - AWS Marketplace에 WordPress가 이미 설치되어 있는 AMI(Amazon Machine Image)인 "WordPress Certified by Bitnami and Automattic"를 선택하고 Continue를 클릭합니다.
 
   ![워드프레스 이미지](./img/ami_wordpress.png)
@@ -37,29 +41,33 @@ AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2�
 
   <img src="./img/ec2-keypair.png" alt="키 페어 설정" width="650px" height="400px" />
 
-3. **WordPress 접속**
+4. **WordPress 접속**
+
   - Instanse State가 Running으로 바뀌었다면 Public IP를 확인하고 접속합니다.
 
   ![워드프레스 접속](./img/ec2-publicip.png)
 
-4. **WordPress 사용자 정의**
+5. **WordPress 사용자 정의**
+
   - WordPress 관리 페이지에 로그인하기 위해서는 사용자를 정의해야 합니다. 암호를 찾기 위해서 생성한 인스턴스의 설정을 클릭하고 시스템 로그 가져오기를 선택합니다. 그리고 로그 아래쪽에 있는 해쉬 암호를 복사합니다.
   
   ![시스템 로그 가져오기](./img/ec2-system-log.png)
   <img src="./img/ec2-wordpress-pwd.png" alt="워드프레스 암호"/>
 
-5. **WordPress 로그인**
-  - URL 뒤에 /admin을 추가하고 로그 파일에서 확인한 사용자 이름 user와 암호를 입력합니다.
+6. **WordPress 로그인**
+
+  - publicip 뒤에 /admin을 추가하고 로그 파일에서 확인한 사용자 이름 user와 암호를 입력합니다.
 
   <img src="./img/admin-login.png" alt="어드민 로그인" width="650px" height="500px" />
 
 6. **WordPress 글 작성하기**
+
   - 왼쪽 대시보드의 Posts - Add New를 클릭하고 제목과 내용을 작성한 후 Publish를 클릭합니다.
 
   ![워드프레스 글쓰기](./img/wordpress-new.png)
 
 
-**고생하셨습니다. 다음 S3 부스로 이동해주세요!**
+**고생하셨습니다. 다음 RDS 부스로 이동해주세요!**
 
 
 해당 실습 가이드는 https://github.com/AUSG/aws-univ-expo/ec2 에서 확인할 수 있습니다.
