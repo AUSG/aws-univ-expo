@@ -36,7 +36,7 @@ AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2�
   - EC2 인스턴스에 직접 접근하기 위해서는 반드시 키 페어가 필요합니다. 키 페어를 생성하고 다운로드 해주세요. 키 페어는 나중에 다시 다운받을 없으며, 분실시 해당 인스턴스에 다시 접근할 수 없습니다. 기존 키 페어가 있는 경우에는 새로 생성하지 않고 사용할 수 있습니다.
   > AWS에서는 키 페어를 .ssh 하위 디렉토리에 저장하는 것을 권장하고 있습니다.
 
-  <img src="./img/ec2-keypair.png" alt="키 페어 설정" width="" height="300px" />
+  <img src="./img/ec2-keypair.png" alt="키 페어 설정" width="500px" height="300px" />
 
 3. **WordPress 접속**
   - Instanse State가 Running으로 바뀌었다면 Public IP를 확인하고 접속합니다.
