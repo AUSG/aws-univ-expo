@@ -47,7 +47,7 @@ AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2�
   - WordPress 관리 페이지에 로그인하기 위해서는 사용자를 정의해야 합니다. 암호를 찾기 위해서 생성한 인스턴스의 설정을 클릭하고 시스템 로그 가져오기를 선택합니다. 그리고 로그 아래쪽에 있는 해쉬 암호를 복사합니다.
   
   ![시스템 로그 가져오기](./img/ec2-system-log.png)
-  <img src="./img/ec2-wordpress-pwd.png" alt="워드프레스 암호" width="650px" height="400px" />
+  <img src="./img/ec2-wordpress-pwd.png" alt="워드프레스 암호"/>
 
 5. **WordPress 로그인**
   - URL 뒤에 /admin을 추가하고 로그 파일에서 확인한 사용자 이름 user와 암호를 입력합니다.
