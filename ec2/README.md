@@ -52,7 +52,7 @@ AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2�
 5. **WordPress 로그인**
   - URL 뒤에 /admin을 추가하고 로그 파일에서 확인한 사용자 이름 user와 암호를 입력합니다.
 
-  <img src="./img/admin-login.png" alt="어드민 로그인" width="650px" height="700px" />
+  <img src="./img/admin-login.png" alt="어드민 로그인" width="650px" height="500px" />
 
 6. **WordPress 글 작성하기**
   - 왼쪽 대시보드의 Posts - Add New를 클릭하고 제목과 내용을 작성한 후 Publish를 클릭합니다.
