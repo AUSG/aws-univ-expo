@@ -49,7 +49,7 @@
 
 4. **WordPress 접속**
 
-  - Instanse State가 Running으로 바뀌었다면 public IP를 확인하고 접속합니다.
+  - Instance State가 Running으로 바뀌었다면 public IP를 확인하고 접속합니다.
 
   ![워드프레스 접속](./img/ec2-publicip.png)
 
