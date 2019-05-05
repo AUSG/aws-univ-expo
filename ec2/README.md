@@ -11,18 +11,18 @@
 이 가이드는 Amazon EC2 가상 머신(인스턴스)에 설치된 WordPress를 이용하여 웹사이트를 가동하고 운영하는 방법을 다룹니다.
 모든 작업은 프리티어에 해당합니다.
 
-1. **AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2를 찾아 대시보드를 엽니다.**
+**1. AWS Management Console에 로그인 후 서비스 - 컴퓨팅 아래에서 EC2를 찾아 대시보드를 엽니다.**
 
 ![콘솔 로그인](./img/console_login.png)
 ![컴퓨팅 - 서비스](./img/computing_service.png)
 
-2. **Amazon EC2 인스턴스 시작**
+**2. Amazon EC2 인스턴스 시작**
 
 - EC2 대시보드 왼쪽에서 인스턴스를 클릭하고 인스턴스 시작을 선택하여 가상 머신을 생성합니다.
 
 ![인스턴스 생성](./img/launch_instance.png)
 
-3. **인스턴스 구성**
+**3. 인스턴스 구성**
 
 - AWS Marketplace에 WordPress가 이미 설치되어 있는 AMI(Amazon Machine Image)인 "WordPress Certified by Bitnami and Automattic"를 선택하고 Continue를 클릭합니다.
 
@@ -48,13 +48,13 @@
 
   <img src="./img/ec2-keypair.png" alt="키 페어 설정" width="650px" height="400px" />
 
-4. **WordPress 접속**
+**4. WordPress 접속**
 
 - Instance State가 Running으로 바뀌었다면 Public DNS(IPv4)를 확인하고 접속합니다.
 
 ![워드프레스 접속](./img/ec2-publicip.png)
 
-5. **SSH를 사용하여 EC2 접속하기**
+**5. SSH를 사용하여 EC2에 접속하기**
 
 - WordPress 관리 페이지에 로그인하기 위해서는 사용자를 정의해야 합니다. 초기화된 비밀번호는 EC2 대시보드의 시스템 로그를 통해서도 확인할 수 있지만 RDS 부스에서 사용하게 될 SSH(Secure Shell)를 통해 EC2에 접속하여 비밀번호를 확인해보겠습니다. 본인의 환경에 맞는 방법을 선택해주세요.
 
@@ -80,7 +80,7 @@
 
   ![SecureShell](./img/shell-1.png)
 
-  - 연결을 클릭하고 Are you sure you want to continue connecting (yes/no)?라는 문구가 나오면 yes를 입력합니다.
+  - 연결을 클릭하고 "Are you sure you want to continue connecting (yes/no)?"라는 문구가 나오면 yes를 입력합니다.
 
   - `$ cat ./bitnami_credentials`를 입력하고 username과 password를 확인합니다.
 
@@ -91,17 +91,17 @@
     - `$ chmod 400 EC2-KeyPair.pem`
     - `$ ssh -i "EC2-KeyPair.pem" ubuntu@<public_dns>`
 
-  - Are you sure you want to continue connecting (yes/no)?라는 문구가 나오면 yes를 입력합니다.
+  - "Are you sure you want to continue connecting (yes/no)?"라는 문구가 나오면 yes를 입력합니다.
 
   - `$ cat ./bitnami_credentials`를 입력하고 username과 password를 확인합니다.
 
-6. **WordPress 로그인**
+**6. WordPress 로그인**
 
 - Public DNS 뒤에 /admin을 추가하고 SSH를 통해 확인한 사용자 username과 password를 입력합니다.
 
   <img src="./img/admin-login.png" alt="어드민 로그인" width="650px" height="500px" />
 
-6. **WordPress 글 작성하기**
+**7. WordPress 글 작성하기**
 
 - 왼쪽 대시보드의 Posts - Add New를 클릭하고 제목과 내용을 작성한 후 Publish를 클릭합니다.
 
