@@ -54,28 +54,9 @@
 
 ![워드프레스 접속](./img/ec2-publicip.png)
 
-5. **WordPress 사용자 정의**
+5. **SSH를 사용하여 EC2 접속하기**
 
-- WordPress 관리 페이지에 로그인하기 위해서는 사용자를 정의해야 합니다. 암호를 찾기 위해서 생성한 인스턴스의 설정을 클릭하고 시스템 로그 가져오기를 선택합니다. 그리고 로그 아래쪽에 있는 해쉬 암호를 복사합니다.
-
-![시스템 로그 가져오기](./img/ec2-system-log.png)
-<img src="./img/ec2-wordpress-pwd.png" alt="워드프레스 암호"/>
-
-6. **WordPress 로그인**
-
-- Public DNS 뒤에 /admin을 추가하고 로그 파일에서 확인한 사용자 이름 user와 암호를 입력합니다.
-
-  <img src="./img/admin-login.png" alt="어드민 로그인" width="650px" height="500px" />
-
-6. **WordPress 글 작성하기**
-
-- 왼쪽 대시보드의 Posts - Add New를 클릭하고 제목과 내용을 작성한 후 Publish를 클릭합니다.
-
-![워드프레스 글쓰기](./img/wordpress-new.png)
-
-7. **SSH를 사용하여 EC2에 접속하기**
-
-- 마지막으로 SSH를 통해 EC2에 접근하는 방법을 알아보겠습니다. 본인 환경에 맞는 방법을 선택해주세요.
+- WordPress 관리 페이지에 로그인하기 위해서는 사용자를 정의해야 합니다. 초기화된 비밀번호는 EC2 대시보드의 시스템 로그를 통해서도 확인할 수 있지만 RDS 부스에서 사용하게 될 SSH(Secure Shell)를 통해 EC2에 접속하여 비밀번호를 확인해보겠습니다. 본인의 환경에 맞는 방법을 선택해주세요.
 
 - Windows
 
@@ -86,12 +67,12 @@
 
   - CMD를 열고 키 페어가 설치된 디렉토리로 이동 후 다음 명령어를 입력합니다.
 
-    - `$ chmod 400 <file_name>.pem`
-    - `$ ssh-keygen -y -f <file_name>.pem > <file_name>.pub`
-    - `$ copy <file_name>.pem <file_name>`
+    - `$ chmod 400 EC2-KeyPair.pem`
+    - `$ ssh-keygen -y -f EC2-KeyPair.pem > EC2-KeyPair.pub`
+    - `$ copy EC2-KeyPair.pem EC2-KeyPair`
 
   - 명령어를 입력했다면 설치된 확장프로그램에서 Secure Shell을 클릭한 후 연결 대화상자로 들어갑니다.  
-  사용자 이름에는 ubuntu, 호스트 이름에는 Public DNS를 입력해주세요. 그리고 다음과 같이 가져오기를 클릭 후 키 페어가 저장된 폴더에서 두 개의 파일을 불러옵니다. (.pem 확장자가 없는 파일과 .pub 확장자를 가진 파일 2개)
+  사용자 이름에는 ubuntu, 호스트 이름에는 Public DNS를 입력해주세요. 그리고 다음과 같이 가져오기를 클릭 후 키 페어가 저장된 폴더에서 두 개의 EC2-KeyPair 파일을 불러옵니다. (.pem 확장자가 없는 파일과 .pub 확장자를 가진 파일 2개)
 
   ![SecureShell](./img/shell-2.png)
 
@@ -101,14 +82,30 @@
 
   - 연결을 클릭하고 Are you sure you want to continue connecting (yes/no)?라는 문구가 나오면 yes를 입력합니다.
 
-* MacOS 또는 Linux
+  - `$ cat ./bitnami_credentials`를 입력하고 username과 password를 확인합니다.
+
+- MacOS 또는 Linux
 
   - 터미널을 열고 키 페어가 저장된 디렉토리로 이동한 후 다음 명령어를 입력합니다.
 
-    - `$ chmod 400 <file_name>.pem`
-    - `$ ssh -i "<file_name>.pem" ubuntu@<public_dns>`
+    - `$ chmod 400 EC2-KeyPair.pem`
+    - `$ ssh -i "EC2-KeyPair.pem" ubuntu@<public_dns>`
 
   - Are you sure you want to continue connecting (yes/no)?라는 문구가 나오면 yes를 입력합니다.
+
+  - `$ cat ./bitnami_credentials`를 입력하고 username과 password를 확인합니다.
+
+6. **WordPress 로그인**
+
+- Public DNS 뒤에 /admin을 추가하고 SSH를 통해 확인한 사용자 username과 password를 입력합니다.
+
+  <img src="./img/admin-login.png" alt="어드민 로그인" width="650px" height="500px" />
+
+6. **WordPress 글 작성하기**
+
+- 왼쪽 대시보드의 Posts - Add New를 클릭하고 제목과 내용을 작성한 후 Publish를 클릭합니다.
+
+![워드프레스 글쓰기](./img/wordpress-new.png)
 
 **고생하셨습니다. 다음 RDS 부스로 이동해주세요!**
 
