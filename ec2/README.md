@@ -73,7 +73,7 @@
     - `$ chmod 400 EC2-KeyPair.pem`
     - `$ ssh -i "EC2-KeyPair.pem" ubuntu@<public_dns>`
 
-  - 연결을 클릭하고 "Are you sure you want to continue connecting (yes/no)?"라는 문구가 나오면 yes를 입력합니다.
+  - "Are you sure you want to continue connecting (yes/no)?"라는 문구가 나오면 yes를 입력합니다.
 
   - `$ cat ./bitnami_credentials`를 입력하고 username과 password를 확인합니다.
 
