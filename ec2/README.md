@@ -79,16 +79,17 @@
 
 - Windows
 
-  - Windows에서 SSH를 사용하려면 Putty 또는 OpenSSH이 설치된 PowerShell이 필요합니다. 해당 실습에서는 접근성을 위해 Secure Shell이라는 Chrome Extension을 사용합니다.
+  - Windows에서 SSH를 사용하려면 Putty 또는 OpenSSH이 설치된 PowerShell이 필요합니다.  
+  해당 실습에서는 접근성을 위해 Secure Shell이라는 Chrome Extension을 사용합니다.
   - 크롬 확장프로그램에 Secure Shell을 검색하고 설치해주세요.
 
   ![SecureShell](./img/extension.png)
 
   - CMD를 열고 키 페어가 설치된 디렉토리로 이동 후 다음 명령어를 입력합니다.
 
-  - `$ chmod 400 <file_name>.pem`
-  - `$ ssh-keygen -y -f <file_name>.pem > <file_name>.pub`
-  - `$ copy <file_name>.pem <file_name>`
+    - `$ chmod 400 <file_name>.pem`
+    - `$ ssh-keygen -y -f <file_name>.pem > <file_name>.pub`
+    - `$ copy <file_name>.pem <file_name>`
 
   - 명령어를 입력했다면 설치된 확장프로그램에서 Secure Shell을 클릭한 후 연결 대화상자로 들어갑니다.  
   사용자 이름에는 ubuntu, 호스트 이름에는 Public DNS를 입력해주세요. 그리고 다음과 같이 가져오기를 클릭 후 키 페어가 저장된 폴더에서 두 개의 파일을 불러옵니다. (.pem 확장자가 없는 파일과 .pub 확장자를 가진 파일 2개)
@@ -105,8 +106,8 @@
 
   - 터미널을 열고 키 페어가 저장된 디렉토리로 이동한 후 다음 명령어를 입력합니다.
 
-  - `$ chmod 400 <file_name>.pem`
-  - `$ ssh -i "<file_name>.pem" ubuntu@<public_dns>`
+    - `$ chmod 400 <file_name>.pem`
+    - `$ ssh -i "<file_name>.pem" ubuntu@<public_dns>`
 
   - Are you sure you want to continue connecting (yes/no)?라는 문구가 나오면 yes를 입력합니다.
 
