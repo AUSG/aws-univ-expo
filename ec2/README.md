@@ -68,7 +68,7 @@
 
   - Git Bash가 실행됐다면 키 페어가 저장된 폴더로 이동한 후 다음 명령어를 입력해주세요.
   > Launch Git Bash를 체크하지 않았더라도 시작 메뉴에서 Git - Git Bash를 통해 실행할 수 있습니다.  
-  > Git Bash에서는 Linux 명령어를 사용할 수 있기 때문에 "C:\Key" 폴더로 이동시 cd /C/Key처럼 입력해야 합니다.
+  > Git Bash에서는 Linux 명령어를 사용하기 때문에 "C:\Key" 폴더로 이동시 "cd /C/Key"처럼 입력해야 합니다.
 
     - `$ chmod 400 EC2-KeyPair.pem`
     - `$ ssh -i "EC2-KeyPair.pem" ubuntu@<public_dns>`
