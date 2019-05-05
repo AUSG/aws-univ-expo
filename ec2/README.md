@@ -61,13 +61,13 @@
 - Windows
 
   - Windows에서 SSH를 사용하려면 Putty 또는 OpenSSH이 설치된 PowerShell, Git Bash 등이 필요합니다. 해당 실습에서는 Windows에서 Linux 명령어를 사용할 수 있는 Git Bash를 사용합니다.
-  - https://gitforwindows.org에서 Git을 설치합니다. 설치는 Default Option으로 계속 Next를 한 후 마지막에 Launch Git Bash를 체크하시면 자동으로 Git Bash가 실행됩니다.
+  - https://gitforwindows.org에서 Git을 설치합니다. 설치는 Default Option으로 계속 Next 한 후 마지막에 Launch Git Bash를 체크하시면 자동으로 Git Bash가 실행됩니다.
 
   ![Git Bash](./img/git-1.png)
   ![Git Bash](./img/git-2.png)
 
   - Git Bash가 실행됐다면 키 페어가 저장된 폴더로 이동한 후 다음 명령어를 입력해주세요.
-  > Launch Git Bash를 체크하지 않았더라도 시작 메뉴에서 Git - Git Bash를 통해 실행할 수 있습니다.
+  > Launch Git Bash를 체크하지 않았더라도 시작 메뉴에서 Git - Git Bash를 통해 실행할 수 있습니다.  
   > Git Bash에서는 Linux 명령어를 사용할 수 있기 때문에 "C:\Key" 폴더로 이동시 cd /C/Key처럼 입력해야 합니다.
 
     - `$ chmod 400 EC2-KeyPair.pem`
