@@ -73,14 +73,13 @@
 
 ![워드프레스 글쓰기](./img/wordpress-new.png)
 
-7. **EC2에 SSH 접속하기**
+7. **SSH를 사용하여 EC2에 접속하기**
 
 - 마지막으로 SSH를 통해 EC2에 접근하는 방법을 알아보겠습니다. 본인 환경에 맞는 방법을 선택해주세요.
 
 - Windows
 
-  - Windows에서 SSH를 사용하려면 Putty 또는 OpenSSH이 설치된 PowerShell이 필요합니다.  
-  해당 실습에서는 접근성을 위해 Secure Shell이라는 Chrome Extension을 사용합니다.
+  - Windows에서 SSH를 사용하려면 Putty 또는 OpenSSH이 설치된 PowerShell이 필요합니다. 해당 실습에서는 접근성을 위해 Secure Shell이라는 Chrome Extension을 사용합니다.
   - 크롬 확장프로그램에 Secure Shell을 검색하고 설치해주세요.
 
   ![SecureShell](./img/extension.png)
