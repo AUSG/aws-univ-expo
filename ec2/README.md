@@ -18,62 +18,97 @@
 
 2. **Amazon EC2 인스턴스 시작**
 
-  - EC2 대시보드 왼쪽에서 인스턴스를 클릭하고 인스턴스 시작을 선택하여 가상 머신을 생성합니다.
+- EC2 대시보드 왼쪽에서 인스턴스를 클릭하고 인스턴스 시작을 선택하여 가상 머신을 생성합니다.
 
-  ![인스턴스 생성](./img/launch_instance.png)
+![인스턴스 생성](./img/launch_instance.png)
 
 3. **인스턴스 구성**
 
-  - AWS Marketplace에 WordPress가 이미 설치되어 있는 AMI(Amazon Machine Image)인 "WordPress Certified by Bitnami and Automattic"를 선택하고 Continue를 클릭합니다.
+- AWS Marketplace에 WordPress가 이미 설치되어 있는 AMI(Amazon Machine Image)인 "WordPress Certified by Bitnami and Automattic"를 선택하고 Continue를 클릭합니다.
 
-  ![워드프레스 이미지](./img/ami_wordpress.png)
+![워드프레스 이미지](./img/ami_wordpress.png)
 
-  - 인스턴스 유형은 t2.micro를 선택합니다. t2.micro는 1개의 vCPUs와 1GiB 메모리를 제공하며, 프리티어에서는 총 750시간을 무료로 사용할 수 있습니다. t2.micro 이외의 인스턴스는 과금이 되니 주의해주세요.
+- 인스턴스 유형은 t2.micro를 선택합니다. t2.micro는 1개의 vCPUs와 1GiB 메모리를 제공하며, 프리티어에서는 총 750시간을 무료로 사용할 수 있습니다. t2.micro 이외의 인스턴스는 과금이 되니 주의해주세요.
 
-  - 인스턴스 세부 정보 구성은 기본값을 그대로 사용합니다.
+- 인스턴스 세부 정보 구성은 기본값을 그대로 사용합니다.
 
-  - 스토리지도 기본값을 사용합니다.
+- 스토리지도 기본값을 사용합니다.
 
-  - 태그 추가를 선택하고 Key : Value의 형식으로 입력해줍니다. 태그는 AWS 자원을 관리하기 위한 사용자 정의 Key, Value 쌍입니다. 예를 들어 Name: EC2-SookMyung-WordPress, Owner: KSY가 태그로 등록되어 있다면 Owner가 KSY인 EC2 자원을 검색하는 쿼리 등을 통해 쉽게 자원을 관리할 수 있습니다.
+- 태그 추가를 선택하고 Key : Value의 형식으로 입력해줍니다. 태그는 AWS 자원을 관리하기 위한 사용자 정의 Key, Value 쌍입니다. 예를 들어 Name: EC2-SookMyung-WordPress, Owner: KSY가 태그로 등록되어 있다면 Owner가 KSY인 EC2 자원을 검색하는 쿼리 등을 통해 쉽게 자원을 관리할 수 있습니다.
 
-  ![태그 추가](./img/add_tag.png)
+![태그 추가](./img/add_tag.png)
 
-  - 보안 그룹 설정은 기본값을 사용합니다.
+- 보안 그룹 설정은 기본값을 사용합니다.
 
-  - 검토 및 시작을 선택하고 지금까지 설정한 구성을 확안힙니다. 이상이 없다면 시작하기를 클릭해주세요.
+- 검토 및 시작을 선택하고 지금까지 설정한 구성을 확안힙니다. 이상이 없다면 시작하기를 클릭해주세요.
 
-  - EC2 인스턴스에 직접 접근하기 위해서는 반드시 키 페어가 필요합니다. 키 페어를 생성하고 다운로드 해주세요. 키 페어는 나중에 다시 다운받을 수 없으며, 분실시 해당 인스턴스에 다시 접근할 수 없습니다. 기존 키 페어가 있는 경우에는 새로 생성하지 않고 사용할 수 있습니다.
+- EC2 인스턴스에 직접 접근하기 위해서는 반드시 키 페어가 필요합니다. 키 페어를 생성하고 다운로드 해주세요. 키 페어는 나중에 다시 다운받을 수 없으며, 분실시 해당 인스턴스에 다시 접근할 수 없습니다. 기존 키 페어가 있는 경우에는 새로 생성하지 않고 사용할 수 있습니다.
+
   > AWS에서는 키 페어를 .ssh 하위 디렉토리에 저장하는 것을 권장하고 있습니다.
 
   <img src="./img/ec2-keypair.png" alt="키 페어 설정" width="650px" height="400px" />
 
 4. **WordPress 접속**
 
-  - Instance State가 Running으로 바뀌었다면 public IP를 확인하고 접속합니다.
+- Instance State가 Running으로 바뀌었다면 Public DNS(IPv4)를 확인하고 접속합니다.
 
-  ![워드프레스 접속](./img/ec2-publicip.png)
+![워드프레스 접속](./img/ec2-publicip.png)
 
 5. **WordPress 사용자 정의**
 
-  - WordPress 관리 페이지에 로그인하기 위해서는 사용자를 정의해야 합니다. 암호를 찾기 위해서 생성한 인스턴스의 설정을 클릭하고 시스템 로그 가져오기를 선택합니다. 그리고 로그 아래쪽에 있는 해쉬 암호를 복사합니다.
-  
-  ![시스템 로그 가져오기](./img/ec2-system-log.png)
-  <img src="./img/ec2-wordpress-pwd.png" alt="워드프레스 암호"/>
+- WordPress 관리 페이지에 로그인하기 위해서는 사용자를 정의해야 합니다. 암호를 찾기 위해서 생성한 인스턴스의 설정을 클릭하고 시스템 로그 가져오기를 선택합니다. 그리고 로그 아래쪽에 있는 해쉬 암호를 복사합니다.
+
+![시스템 로그 가져오기](./img/ec2-system-log.png)
+<img src="./img/ec2-wordpress-pwd.png" alt="워드프레스 암호"/>
 
 6. **WordPress 로그인**
 
-  - public IP 뒤에 /admin을 추가하고 로그 파일에서 확인한 사용자 이름 user와 암호를 입력합니다.
+- Public DNS 뒤에 /admin을 추가하고 로그 파일에서 확인한 사용자 이름 user와 암호를 입력합니다.
 
   <img src="./img/admin-login.png" alt="어드민 로그인" width="650px" height="500px" />
 
 6. **WordPress 글 작성하기**
 
-  - 왼쪽 대시보드의 Posts - Add New를 클릭하고 제목과 내용을 작성한 후 Publish를 클릭합니다.
+- 왼쪽 대시보드의 Posts - Add New를 클릭하고 제목과 내용을 작성한 후 Publish를 클릭합니다.
 
-  ![워드프레스 글쓰기](./img/wordpress-new.png)
+![워드프레스 글쓰기](./img/wordpress-new.png)
 
+7. **EC2에 SSH 접속하기**
+
+- 마지막으로 SSH를 통해 EC2에 접근하는 방법을 알아보겠습니다. 본인 환경에 맞는 방법을 선택해주세요.
+
+- Windows
+
+  - Windows에서 SSH를 사용하려면 Putty 또는 OpenSSH이 설치된 PowerShell이 필요합니다. 하지만 해당 실습에서는 접근성을 위해 Secure Shell이라는 Chrome Extension을 사용합니다.
+  - 크롬 확장프로그램에 Secure Shell을 검색하고 설치해주세요.
+
+  ![SecureShell](./img/extension.png)
+
+  - CMD를 열고 키 페어가 설치된 디렉토리로 이동 후 다음 명령어를 입력합니다.
+
+  `$ chmod 400 <file_name>.pem`
+  `$ ssh-keygen -y -f <file_name>.pem > <file_name>.pub`
+  `$ copy <file_name>.pem <file_name>`
+
+  - 명령어를 입력했다면 설치된 확장프로그램에서 Secure Shell을 클릭한 후 연결 대화상자로 들어갑니다. 사용자 이름에는 ubuntu, 호스트 이름에는 Public DNS를 입력해주세요. 그리고 다음과 같이 가져오기를 클릭 후 키 페어가 저장된 폴더에서 두 개의 파일을 불러옵니다. (.pem 확장자가 없는 파일과 .pub 확장자를 가진 파일 2개)
+
+  ![SecureShell](./img/shell-2.png)
+
+  - 위의 과정을 완료했다면 다음과 같은 화면이 나와야 합니다.
+
+  ![SecureShell](./img/shell-1.png)
+
+  - 연결을 클릭하고 Are you sure you want to continue connecting (yes/no)?라는 문구가 나오면 yes를 입력합니다.
+
+* MacOS 또는 Linux
+
+  - 터미널을 열고 키 페어가 저장된 디렉토리로 이동한 후 다음 명령어를 입력합니다.
+
+  `$ chmod 400 <file_name>.pem`
+  `$ ssh -i "<file_name>.pem" ubuntu@<public_dns>`
+
+  - Are you sure you want to continue connecting (yes/no)?라는 문구가 나오면 yes를 입력합니다.
 
 **고생하셨습니다. 다음 RDS 부스로 이동해주세요!**
-
 
 해당 실습 가이드는 https://github.com/AUSG/aws-univ-expo/ec2 에서 확인할 수 있습니다.
