@@ -1,16 +1,28 @@
-# AWS S3로 워드프레스 저장소 만들기
+## 숙명여대와 함께하는 AWS Univ. Expo 핸즈온
 
+😎 **Awskrug Univsersity Student Group (AUSG)** 핸즈온에 오신 것을 환영합니다.
+
+핸즈온에서는 EC2를 사용하여 워드프레스를 실행시키고, RDS를 연동하여 직접 데이터를 저장하는 과정과 마지막으로 S3를 사용하여 정적 파일을 업로드하는 과정을 실습합니다.
+
+실습에 이용되는 서비스는 프리티어 내에서 진행되며, 마지막 S3 부스에서 생성한 모든 서비스를 삭제하는 실습이 진행될 예정입니다. 불필요한 과금을 피하기 위해 S3 부스를 반드시 방문해주세요!
+
+## AWS S3로 워드프레스 저장소 만들기
+
+#### 🤗 이번 세션은 EC2, RDS 부스에서 만든 결과물에 저장소를 붙이는 세션입니다. 또한 세션 끝에 3가지 서비스를 모두 삭제하여 과금을 방지하는 세션이 있으니 EC2, RDS 부스를 모두 참여하신 뒤에 참여해주세요! 여의치 않다면 EC2 세션을 필수로 듣고 현재 세션을 들으신 후 RDS 세션을 들으신 후 자료 끝에 있는 서비스 삭제하기를 진행해주세요!
+
+EC2 세션 - <https://github.com/AUSG/aws-univ-expo/tree/master/ec2
 
 ## 도입
-### S3란 무엇인지에 대해서 먼저 알아 봅시다!
 
-#### 🤗 이번 세션은 EC2, RDS 부스에서 만든 결과물에 저장소를 붙이는 세션입니다. 또한 세션 끝에 3가지 서비스를 모두 삭제하여 과금을 방지하는 세션이 있으니 EC2, RDS 부스를 모두 참여하신 뒤에 참여해주세요! 여의치 않다면 EC2 세션을 필수로 듣고 다른 세션들을 들으신 후 현재 자료 끝에 있는 서비스 삭제하기를 진행해주세요!
+### S3란 무엇인지에 대해서 먼저 알아 봅시다!
 
 **AWS S3**(Simple Storage Service)는 Object Storage Service로 AWS에서 제공하는 파일 저장소입니다. 확장성, 데이터 가용성, 보안과 성능을 고루 갖춘 업계 최고의 스토리지 서비스입니다.
 
 ## 용어
 
 아래의 용어는 가장 기초적인 수준에서의 개념만 설명하고 있습니다. 자세한 개념 설명은 [여기(공식홈페이지)](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/dev/Introduction.html#features)를 참고해주세요
+
+공식홈페이지 - <https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/dev/Introduction.html#features>
 
 ### 객체(Object)
 
@@ -67,6 +79,8 @@ AWS 프리 티어를 사용하는 고객은 Amazon S3를 무료로 시작할 수
 
 [자세한 요금](https://aws.amazon.com/ko/s3/pricing/)은 사이트를 확인하세요
 
+사이트 - <https://aws.amazon.com/ko/s3/pricing/>
+
 ## 사용하기
 
 ### 목표
@@ -86,3 +100,6 @@ AWS 프리 티어를 사용하는 고객은 Amazon S3를 무료로 시작할 수
 ### - 정적 웹사이트 호스팅
 
 #### 이제 S3를 Wordpress에 연결하는 실습을 해보겠습니다! [실습](./Exercise.md)
+
+
+

@@ -102,4 +102,6 @@
 
 **고생하셨습니다. 다음 RDS 부스로 이동해주세요!**
 
-해당 실습 가이드는 https://github.com/AUSG/aws-univ-expo/ec2 에서 확인할 수 있습니다.
+해당 실습 가이드는 https://github.com/AUSG/aws-univ-expo/tree/master/ec2 에서 확인할 수 있습니다.
+
+RDS 가이드 - <https://github.com/AUSG/aws-univ-expo/tree/master/rds>

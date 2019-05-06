@@ -1,8 +1,16 @@
+## 숙명여대와 함께하는 AWS Univ. Expo 핸즈온
+
+😎 **Awskrug Univsersity Student Group (AUSG)** 핸즈온에 오신 것을 환영합니다.
+
+핸즈온에서는 EC2를 사용하여 워드프레스를 실행시키고, RDS를 연동하여 직접 데이터를 저장하는 과정과 마지막으로 S3를 사용하여 정적 파일을 업로드하는 과정을 실습합니다.
+
+실습에 이용되는 서비스는 프리티어 내에서 진행되며, 마지막 S3 부스에서 생성한 모든 서비스를 삭제하는 실습이 진행될 예정입니다. 불필요한 과금을 피하기 위해 S3 부스를 반드시 방문해주세요!
+
 ## RDS를 사용하여 워드프레스의 데이터 연동해보기
 
 #### :fire: 이번 세션은 EC2를 생성하며 기본으로 생성된 wordpress의 데이터베이스를 RDS로 연동하는 방법에 대해 알아봅니다. 따라서, EC2 세션을 아직 진행하지 않았다면, [EC2 세션](../ec2/readme.md)부터 진행해주세요.
 
-
+EC2 세션 - <https://github.com/AUSG/aws-univ-expo/tree/master/ec2
 
 ### 1. RDS 데이터 베이스 생성
 
@@ -115,8 +123,6 @@ $ vi wp-config.php
 
 
 
-
-
 ### 4. 기존 Database를 RDS에 연결하기
 
 ```shell
@@ -171,8 +177,6 @@ phpmyadmin에 접속한 후, 새로운 데이터베이스 wordpress (원하는 �
 
 ![](./img/13.png)
 
-
-
 ### 5. WordPress에서 글 작성해보기
 
 이제 RDS가 잘 연결되었는지 확인하기 위해 워드프레스에서 글을 써보도록 합시다.
@@ -183,5 +187,9 @@ phpmyadmin에 접속한 후, 새로운 데이터베이스 wordpress (원하는 �
 
 ![](./img/15.png)
 
-고생하셨습니다. 다음 세션인 [S3 세션](../s3/README.md)으로 이동해주세요. :slightly_smiling_face:
+**고생하셨습니다. 다음 세션인 [S3 세션](../s3/README.md)으로 이동해주세요. :slightly_smiling_face:**
+
+해당 실습 가이드는 https://github.com/AUSG/aws-univ-expo/tree/master/rds 에서 확인할 수 있습니다.
+
+S3세션 - <https://github.com/AUSG/aws-univ-expo/tree/master/s3>
 
