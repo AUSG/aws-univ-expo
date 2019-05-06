@@ -86,4 +86,4 @@ AWS 프리 티어를 사용하는 고객은 Amazon S3를 무료로 시작할 수
 ### 정적 웹사이트 호스팅
 
 
-#### 이제 S3를 Wordpress에 연결하는 실습을 해보겠습니다! [실습](./exercise.md)
+#### 이제 S3를 Wordpress에 연결하는 실습을 해보겠습니다! [실습](./Exercise.md)
