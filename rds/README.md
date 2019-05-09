@@ -104,12 +104,13 @@ ErrorDocument 403 "For security reasons, this URL is only accesible using localh
 
 ![](./img/17.png)
 
-이제 원격으로 접속 가능합니다. 퍼블릭 IP주소 뒤에 /phpmyadmin을 입력해보세요. 하지만 기존에 생성된 DB에 대한 정보를 알아야 phpmyadmin에 접근할 수 있습니다. (위에서 진행하던 터미널에서 계속 진행해주세요. )
+이제 원격으로 접속 가능합니다. 퍼블릭 IP주소 뒤에 /phpmyadmin을 입력해보세요. 하지만 기존에 생성된 DB에 대한 정보를 알아야 phpmyadmin에 접근할 수 있습니다.
+
+EC2의 재부팅으로 인해 접속이 끊겼기에 위의 순서대로 다시 접속해주세요. 
 
 ```shell
-현재 경로: /home/bitnami/apps/phpmyadmin/conf
-$ cd ../..
-$ cd wordpress/htdocs 
+현재 경로: /home/bitnami
+$ cd apps/wordpress/htdocs 
 $ vi wp-config.php
 ```
 
