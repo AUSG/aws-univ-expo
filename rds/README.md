@@ -221,7 +221,7 @@ define( 'DB_HOST', '생성된 RDS Endpoint주소:3306' );
 
 ![](./img/15.png)
 
-**고생하셨습니다. 다음 세션인 [S3 세션](../s3/README.md)으로 이동해주세요. :slightly_smiling_face:**
+**고생하셨습니다. 다음 세션인 [S3 세션](../s3)으로 이동해주세요. :slightly_smiling_face:**
 
 해당 실습 가이드는 https://github.com/AUSG/aws-univ-expo/tree/master/rds 에서 확인할 수 있습니다.
 
