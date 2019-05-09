@@ -6,6 +6,8 @@
 
 실습에 이용되는 서비스는 프리티어 내에서 진행되며, 마지막 S3 부스에서 생성한 모든 서비스를 삭제하는 실습이 진행될 예정입니다. 불필요한 과금을 피하기 위해 S3 부스를 반드시 방문해주세요!
 
+---
+
 ## RDS를 사용하여 워드프레스의 데이터 연동해보기
 
 #### :fire: 이번 세션은 EC2를 생성하며 기본으로 생성된 wordpress의 데이터베이스를 RDS로 연동하는 방법에 대해 알아봅니다. 따라서, EC2 세션을 아직 진행하지 않았다면, [EC2 세션](../ec2/readme.md)부터 진행해주세요.
@@ -167,16 +169,44 @@ $ sudo vi config.inc.php
 
 다시 접속을 해보면 다음 화면과 같이 **Amazon RDS**로도 접속을 할 수 있는 것을 볼 수 있습니다.  RDS를 생성할 때 설정하였던 master 사용자명과 암호를 입력하면 실행할 수 있습니다. (사용자명과 암호는  관리자 콘솔 - RDS - 데이터베이스 - 연결 & 보안)
 
-![](./img/12.png)
 
 phpmyadmin에 접속한 후, 새로운 데이터베이스 wordpress (원하는 이름으로 customize 가능)를 생성해주세요. 
 
-![](./img/18.PNG)
+![](./img/21.png)
+
 
 그 후,  기존에 백업해두었던 bitnami_wordpress.sql파일을 업로드해줍니다. **가져오기** 탭을 선택한 후, **choose File ** 버튼을 눌러 해당 파일을 업로드해주세요.
 
+![](./img/20.PNG)
 
-![](./img/13.png)
+
+이제 마지막으로 wordpress 서버와 RDS를 연결하기 위해 wordpress의 config 설정해보도록 합시다.
+
+이전에는 EC2에서 자체적으로 생성된 DB가 연결되어있었지만 이제는 RDS를 연결해야합니다.
+
+```shell
+현재 경로: /home/bitnami/
+$ cd apps/wordpress/htdocs 
+$ vi wp-config.php
+```
+
+다음과 같이 작성해주세요.
+```
+/** The name of the database for WordPress */
+define( 'DB_NAME', '생성한 DB 이름' );
+
+/** MySQL database username */
+define( 'DB_USER', 'RDS Master 사용자 이름' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'RDS Master 사용자 암호' );
+
+/** MySQL hostname */
+define( 'DB_HOST', '생성된 RDS Endpoint주소:3306' );
+```
+
+![](./img/22.png)
+
 
 ### 5. WordPress에서 글 작성해보기
 
