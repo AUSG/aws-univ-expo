@@ -167,17 +167,20 @@ $ sudo vi config.inc.php
 
 ![](./img/17.PNG)
 
-다시 접속을 해보면 다음 화면과 같이 **Amazon RDS**로도 접속을 할 수 있는 것을 볼 수 있습니다.  RDS를 생성할 때 설정하였던 master 사용자명과 암호를 입력하면 실행할 수 있습니다. (사용자명과 암호는  관리자 콘솔 - RDS - 데이터베이스 - 연결 & 보안)
+다시 접속을 해보면 다음 화면과 같이 **Amazon RDS**로도 접속을 할 수 있는 것을 볼 수 있습니다.  
+
+RDS를 생성할 때 설정하였던 master 사용자명과 암호를 입력하면 실행할 수 있습니다. (사용자명과 암호는  관리자 콘솔 - RDS - 데이터베이스 - 연결 & 보안)
 
 
-phpmyadmin에 접속한 후, 새로운 데이터베이스 wordpress (원하는 이름으로 customize 가능)를 생성해주세요. 
+phpmyadmin에 접속한 후, 새로운 데이터베이스 **wordpress** (원하는 이름으로 customize 가능)를 생성해주세요. 
 
 ![](./img/21.png)
 
 
-그 후,  기존에 백업해두었던 bitnami_wordpress.sql파일을 업로드해줍니다. **가져오기** 탭을 선택한 후, **choose File ** 버튼을 눌러 해당 파일을 업로드해주세요.
+그 후,  기존에 백업해두었던 bitnami_wordpress.sql파일을 업로드해줍니다. **가져오기** 탭을 선택한 후, **choose File** 버튼을 눌러 해당 파일을 업로드해주세요.
 
-![](./img/20.PNG)
+
+![](./img/20.png)
 
 
 이제 마지막으로 wordpress 서버와 RDS를 연결하기 위해 wordpress의 config 설정해보도록 합시다.
